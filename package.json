@@ -1,10 +1,13 @@
 {
   "name": "goatbot-yt-api",
   "version": "1.0.0",
+  "description": "YT-dlp API for GoatBot - search, info, download (mp3/mp4).",
   "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
-    "start": "node server.js",
-    "worker": "node worker.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.18.2",
