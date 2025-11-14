@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: goatbot-yt-api
+    env: node
+    plan: free # অথবা pro
+    region: oregon
+    branch: main
+    buildCommand: |
+      npm install
+    startCommand: |
+      node server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: S3_BUCKET
+        value: your-bucket-name
+      - key: AWS_REGION
+        value: your-region
+      - key: AWS_ACCESS_KEY_ID
+        value: your-access-key
+      - key: AWS_SECRET_ACCESS_KEY
+        value: your-secret-key
+      - key: PRESIGN_EXP
+        value: "3600"
